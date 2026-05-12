@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import { Container, SectionHeading } from "../components/Sections"
 import { useLang } from "../context/LanguageContext"
 import t from "../i18n/translations"
+import { imgPath } from "../utils/imgPath"
 
 const tabs = {
   zh: ["全部", "储能箱", "数据中心", "电气电力", "其他五金"],
@@ -58,7 +59,7 @@ const ProductsPageTemplate = ({ heading, subheading }) => {
             <div key={i} className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="h-48 overflow-hidden bg-gray-100">
                 <img
-                  src={`/img/${item.img}`}
+                  src={imgPath(item.img)}
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   onError={e => { e.target.style.display = "none" }}
@@ -87,7 +88,7 @@ const ProductsPageTemplate = ({ heading, subheading }) => {
                 <div className="lg:w-1/2">
                   <div className="h-64 rounded-lg overflow-hidden">
                     <img
-                      src={`/img/${item.img}`}
+                      src={imgPath(item.img)}
                       alt={item.name}
                       className="w-full h-full object-cover"
                     />
@@ -105,7 +106,7 @@ const ProductsPageTemplate = ({ heading, subheading }) => {
                       ["slide15_img3.png", "slide15_img4.png", "slide15_img5.png"],
                     ][i].map((img, j) => (
                       <div key={j} className="h-20 rounded overflow-hidden bg-gray-100">
-                        <img src={`/img/${img}`} alt="" className="w-full h-full object-cover"
+                        <img src={imgPath(img)} alt="" className="w-full h-full object-cover"
                           onError={e => { e.target.style.display = "none" }} />
                       </div>
                     ))}

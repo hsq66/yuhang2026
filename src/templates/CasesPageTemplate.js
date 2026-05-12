@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import { Container, SectionHeading } from "../components/Sections"
 import { useLang } from "../context/LanguageContext"
 import t from "../i18n/translations"
+import { imgPath } from "../utils/imgPath"
 
 const CasesPageTemplate = ({ heading, subheading }) => {
   const { lang } = useLang()
@@ -54,7 +55,7 @@ const CasesPageTemplate = ({ heading, subheading }) => {
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
                 {group.images.map((img, j) => (
                   <div key={j} className="h-36 rounded-lg overflow-hidden bg-gray-100">
-                    <img src={`/img/${img}`} alt=""
+                    <img src={imgPath(img)} alt=""
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       onError={e => { e.target.style.display = "none" }} />
                   </div>
@@ -85,7 +86,7 @@ const CasesPageTemplate = ({ heading, subheading }) => {
 
           {/* Customer image */}
           <div className="mt-10 rounded-lg overflow-hidden">
-            <img src="/img/slide17_img1.jpg" alt={lang === "zh" ? "主要客户" : "Key Customers"}
+            <img src={imgPath("slide17_img1.jpg")} alt={lang === "zh" ? "主要客户" : "Key Customers"}
               className="w-full object-contain"
               onError={e => { e.target.style.display = "none" }} />
           </div>

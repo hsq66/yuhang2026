@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { useLang } from "../context/LanguageContext"
 import t from "../i18n/translations"
+import { imgPath } from "../utils/imgPath"
 
 const Footer = () => {
   const { lang } = useLang()
@@ -15,7 +16,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:w-1/3">
             <Link className="flex items-center gap-2" to="/">
-              <img src="/img/logo1.png" alt="宇航金属" className="w-9 h-9 object-contain" />
+              <img src={imgPath("logo1.png")} alt="宇航金属" className="w-9 h-9 object-contain" />
               <div className="text-lg font-bold">
                 <span className="text-white">宇航</span>
                 <span className="text-green-400">金属</span>

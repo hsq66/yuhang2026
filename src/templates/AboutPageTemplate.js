@@ -4,6 +4,7 @@ import Content from "../components/Content"
 import { Container, SectionHeading } from "../components/Sections"
 import { useLang } from "../context/LanguageContext"
 import t from "../i18n/translations"
+import { imgPath } from "../utils/imgPath"
 
 function AboutPageTemplate({ heading, subheading, html }) {
   const { lang } = useLang()
@@ -44,7 +45,7 @@ function AboutPageTemplate({ heading, subheading, html }) {
 
           <div className="mt-10 lg:mt-0 lg:w-2/5 space-y-4">
             <div className="h-56 rounded-lg overflow-hidden">
-              <img src="/img/工厂厂区.jpg" alt="厂区" className="w-full h-full object-cover" />
+              <img src={imgPath("工厂厂区.jpg")} alt="厂区" className="w-full h-full object-cover" />
             </div>
             <div className="grid grid-cols-2 gap-3">
               {tr.stats.map((s, i) => (

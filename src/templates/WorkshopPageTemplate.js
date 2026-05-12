@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import { Container, SectionHeading } from "../components/Sections"
 import { useLang } from "../context/LanguageContext"
 import t from "../i18n/translations"
+import { imgPath } from "../utils/imgPath"
 
 const WorkshopPageTemplate = ({ heading, subheading }) => {
   const { lang } = useLang()
@@ -43,7 +44,7 @@ const WorkshopPageTemplate = ({ heading, subheading }) => {
 
         {/* Process image */}
         <div className="mt-10 rounded-lg overflow-hidden">
-          <img src="/img/工艺生产流程.png" alt="生产流程" className="w-full object-contain"
+          <img src={imgPath("工艺生产流程.png")} alt="生产流程" className="w-full object-contain"
             onError={e => { e.target.style.display = "none" }} />
         </div>
       </Container>
@@ -62,7 +63,7 @@ const WorkshopPageTemplate = ({ heading, subheading }) => {
               <div key={i} className={`lg:flex lg:items-center lg:gap-12 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
                 <div className="lg:w-1/2">
                   <div className="h-72 rounded-lg overflow-hidden shadow-md">
-                    <img src={`/img/${item.img}`} alt={item.title}
+                    <img src={imgPath(item.img)} alt={item.title}
                       className="w-full h-full object-cover" />
                   </div>
                   {/* Extra images for this workshop */}
@@ -74,7 +75,7 @@ const WorkshopPageTemplate = ({ heading, subheading }) => {
                       ["slide6_img3.jpg", "slide5_img3.jpg", "slide5_img4.jpg"],
                     ][i].map((img, j) => (
                       <div key={j} className="h-20 rounded overflow-hidden bg-gray-100">
-                        <img src={`/img/${img}`} alt="" className="w-full h-full object-cover"
+                        <img src={imgPath(img)} alt="" className="w-full h-full object-cover"
                           onError={e => { e.target.style.display = "none" }} />
                       </div>
                     ))}
@@ -102,7 +103,7 @@ const WorkshopPageTemplate = ({ heading, subheading }) => {
           {["工厂厂区.jpg", "slide7_img2.jpg", "slide8_img1.jpg",
             "slide9_img2.jpg", "slide5_img1.jpg", "slide6_img2.jpg"].map((img, i) => (
             <div key={i} className="h-48 rounded-lg overflow-hidden">
-              <img src={`/img/${img}`} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              <img src={imgPath(img)} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 onError={e => { e.target.style.display = "none" }} />
             </div>
           ))}
