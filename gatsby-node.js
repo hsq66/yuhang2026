@@ -96,6 +96,9 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Frontmatter {
       image: File @fileByRelativePath
+      title_en: String
+      heading_en: String
+      subheading_en: String
       office: Office
       about: About
       contactform: ContactForm
@@ -107,17 +110,23 @@ exports.createSchemaCustomization = ({ actions }) => {
       address: String @md
       phone: String @md
       image: File @fileByRelativePath
+      tagline_en: String
+      location_en: String
     }
 
     type ContactForm {
       heading: String
+      heading_en: String
       description: String
+      description_en: String
       image: File @fileByRelativePath
     }
 
     type About {
       heading: String
+      heading_en: String
       description: String
+      description_en: String
       image: AboutImage
       button: AboutButton
     }
@@ -129,12 +138,15 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type AboutButton {
       label: String
+      label_en: String
       url: String
     }
 
     type TeamMember {
       name: String
+      name_en: String
       title: String
+      title_en: String
       image: File @fileByRelativePath
     }
 

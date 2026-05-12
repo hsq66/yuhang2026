@@ -1,102 +1,328 @@
-const translations = {
+const t = {
   zh: {
-    // Navbar
     nav: {
       home: "首页",
-      projects: "项目",
-      about: "关于",
-      contact: "联系",
+      products: "产品与应用",
+      workshop: "生产实力",
+      cases: "客户案例",
+      about: "关于我们",
+      contact: "联系我们",
     },
-    // Index page
-    index: {
-      contactUs: "联系我们",
-      featuredProjects: "我们的全球项目",
-      viewAll: "查看全部",
+    hero: {
+      tag: "储能 | 预制模块化数据中心 | 电力电气",
+      title: "广东宇航金属制品有限公司",
+      subtitle: "箱式装备结构件配套解决方案龙头企业",
+      cta: "了解更多",
+      cta2: "联系我们",
     },
-    // About page
+    stats: [
+      { value: "2018", label: "创立年份" },
+      { value: "3万㎡", label: "现代化工厂" },
+      { value: "~2亿", label: "年产值" },
+      { value: "400+", label: "员工人数" },
+    ],
     about: {
-      ourTeam: "我们的团队",
+      sectionTag: "公司概况",
+      title: "专注箱式装备结构件配套",
+      desc: "宇航金属创立于2018年，有近3万平米的现代化标准工厂生产基地和研发中心，是集装箱式装备结构件配套龙头企业。公司致力于：储能（工商储、大储、家储）、数据中心、电力电气、交通、特种预制设备等领域，提供全方位的结构件配套产品及服务。",
+      desc2: "宇航始终坚持以\u201c客户为中心、业绩为导向、奋斗者为本\u201d的核心价值观，在加工设备精度与能力上持续升级，致力于成为箱式装备结构件配套行业的领军企业。",
+      subsidiaries: "旗下公司",
+      subs: [
+        "广东宇航金属制品有限公司（大储、工商储、数据中心、电力电气等）",
+        "惠州市鑫捷源五金制品有限公司（工商储、小五金等）",
+        "广州世达生活科技有限公司（家储、小五金等）",
+      ],
+      cert: "通过 ISO9001:2015 质量管理体系认证",
     },
-    // Contact page
+    process: {
+      sectionTag: "生产流程",
+      title: "全流程一站式制造",
+      subtitle: "宇航专注高效制造，打造交付优势——配备完善设备体系与全流程工艺能力，从设计到成品一站式完成。",
+      steps: [
+        { phase: "产前准备", items: ["研发设计", "系统管理", "统筹/调度"] },
+        { phase: "下料", items: ["开卷分料", "激光切板", "激光切管", "等离子切割"] },
+        { phase: "成型", items: ["折弯成形", "焊接打磨", "压铆沉孔", "拉丝抛光"] },
+        { phase: "表面处理", items: ["打砂喷漆", "静电粉末喷涂", "电泳涂装"] },
+        { phase: "集成总装", items: ["总装集成", "质检", "包装"] },
+        { phase: "发货", items: ["物流发货"] },
+      ],
+    },
+    workshop: {
+      sectionTag: "生产车间",
+      title: "先进制造装备",
+      subtitle: "30,000㎡现代化厂房，五大专业车间，重型激光装备与自动化流水线",
+      items: [
+        {
+          title: "重型激光切割",
+          desc: "采用华工与美亚等重型激光设备，确保各种钢材精准制作。配置进口工业机器人自动上下料，确保高效制造。激光切管：20米×40cm×40cm，任意管材生产需要。",
+          img: "slide7_img2.jpg",
+        },
+        {
+          title: "折弯·焊接·装配",
+          desc: "折弯、焊接、装配等工艺成熟，能够应对各种大中小型装备制作。全方位钣金工艺：折弯/焊接/压铆/装配/打砂。",
+          img: "slide8_img1.jpg",
+        },
+        {
+          title: "自动化喷涂",
+          desc: "大型喷涂车间：前处理+流水线作业。表面处理：前置处理与全自动化流水线，各种大型部件表面处理高质高效完成。",
+          img: "slide9_img2.jpg",
+        },
+        {
+          title: "超精密加工",
+          desc: "超精密机加设备清单一览，配备国内外顶级精密加工设备，满足高精度零部件加工需求。",
+          img: "slide6_img2.jpg",
+        },
+      ],
+    },
+    products: {
+      sectionTag: "产品展示",
+      title: "核心产品",
+      subtitle: "专注储能、数据中心、电力电气领域的箱式装备结构件",
+      items: [
+        { name: "储能箱（6MW大储）", img: "slide10_img3.jpg" },
+        { name: "储能柜", img: "slide10_img4.jpg" },
+        { name: "电池箱盖", img: "slide10_img1.jpg" },
+        { name: "电力箱", img: "slide10_img2.jpg" },
+      ],
+    },
+    industries: {
+      sectionTag: "行业应用",
+      title: "钣金解决方案应用",
+      subtitle: "我们的产品广泛应用于通信、电力设备、家居电器、自动化装备及模块化数据中心等场景",
+      items: [
+        {
+          name: "智慧储能（大储）",
+          desc: "宇航金属产品分别应用于光伏储能中车、宝丰、思源电气、华为、比亚迪等大储产品解决方案中。",
+          img: "slide12_img1.jpg",
+        },
+        {
+          name: "储能（工商储·家储）",
+          desc: "宇航金属产品分别应用于箱式集电设备、长时间电池储能设备。",
+          img: "slide13_img1.jpg",
+        },
+        {
+          name: "电气·动力电源",
+          desc: "宇航金属产品分别应用国内知名企业动力电池箱柜、供电设备、发电机箱设备。",
+          img: "slide14_img2.jpg",
+        },
+        {
+          name: "模块化数据中心",
+          desc: "宇航金属产品协同国内知名数据中心生态企业落地国内外数据中心与机房设备。",
+          img: "slide15_img3.png",
+        },
+      ],
+    },
+    customers: {
+      sectionTag: "主要客户",
+      title: "合作伙伴",
+      subtitle: "与国内外知名企业建立长期稳定合作关系",
+      list: [
+        "广州铁道车辆有限公司", "任达集团", "广东君誉新能源",
+        "华为", "比亚迪", "思源电气", "宝丰能源", "中车集团",
+        "科华数据", "阳光电源", "固德威", "德业股份",
+      ],
+    },
+    culture: {
+      sectionTag: "企业文化",
+      title: "致敬时代，智领未来",
+      values: [
+        { title: "客户为中心", desc: "以客户需求为导向，提供最优质的产品和服务" },
+        { title: "业绩为导向", desc: "以结果说话，持续提升产品品质与交付效率" },
+        { title: "奋斗者为本", desc: "尊重每一位奋斗者，共同成就企业与个人价值" },
+      ],
+      cert: "ISO9001:2015 质量管理体系认证",
+    },
     contact: {
+      sectionTag: "联系我们",
+      title: "期待与您合作",
+      address: "广东省惠州市博罗县金龙大道833号",
+      phone: "159 9964 0100 / 132 1516 5666",
+      email: "GD_yuhangMetal@163.com",
+      website: "https://yuhang2023.com",
+      formTitle: "发送消息",
       firstName: "名",
       lastName: "姓",
-      email: "邮箱",
-      phone: "电话",
+      emailLabel: "邮箱",
+      phoneLabel: "电话",
       phoneOptional: "选填",
       message: "留言",
-      messageMax: "最多 500 字",
+      messageMax: "最多500字",
       submit: "提交",
     },
-    // Projects page
-    projects: {
-      viewAll: "查看全部",
-    },
-    // Footer
     footer: {
-      about: "关于",
-      company: "公司",
-      community: "社区",
-      careers: "招聘",
-      blog: "博客",
-      tech: "技术",
-      music: "音乐",
-      videos: "视频",
-      products: "产品",
-      contact: "联系",
-      copyright: "© 宇航金属 2026 - 版权所有",
-      description: "广东宇航金属制品有限公司，专注于高品质金属制品的研发与制造。",
+      description: "广东宇航金属制品有限公司，专注于储能、预制模块化数据中心及电力电气领域的箱式装备结构件研发与制造。",
+      quickLinks: "快速导航",
+      products: "产品与应用",
+      workshop: "生产实力",
+      cases: "客户案例",
+      about: "关于我们",
+      contact: "联系我们",
+      contactInfo: "联系方式",
+      copyright: "© 2026 广东宇航金属制品有限公司 版权所有",
     },
   },
   en: {
-    // Navbar
     nav: {
       home: "Home",
-      projects: "Projects",
+      products: "Products",
+      workshop: "Workshop",
+      cases: "Cases",
       about: "About",
       contact: "Contact",
     },
-    // Index page
-    index: {
-      contactUs: "Contact us",
-      featuredProjects: "Our projects from all over the world",
-      viewAll: "View all",
+    hero: {
+      tag: "Energy Storage | Prefab Modular Data Centers | Power & Electrical",
+      title: "Guangdong Yuhang Metal Products Co., Ltd.",
+      subtitle: "The Leading Provider of Structural Component Solutions for Enclosure Equipment",
+      cta: "Learn More",
+      cta2: "Contact Us",
     },
-    // About page
+    stats: [
+      { value: "2018", label: "Founded" },
+      { value: "30,000㎡", label: "Modern Factory" },
+      { value: "~¥200M", label: "Annual Output" },
+      { value: "400+", label: "Employees" },
+    ],
     about: {
-      ourTeam: "Our team",
+      sectionTag: "Company Profile",
+      title: "Focused on Enclosure Structural Components",
+      desc: "Founded in 2018, Yuhang Metal has a nearly 30,000㎡ modern standard factory and R&D center, and is a leading enterprise in container-type equipment structural component solutions. The company is dedicated to energy storage (C&I, utility-scale, residential), data centers, power & electrical, transportation, and special prefabricated equipment.",
+      desc2: "Yuhang always adheres to the core values of 'customer-centric, performance-driven, and striving-oriented', continuously upgrading processing equipment precision and capabilities, committed to becoming the industry leader in enclosure structural component solutions.",
+      subsidiaries: "Subsidiaries",
+      subs: [
+        "Guangdong Yuhang Metal Products Co., Ltd. (Utility ESS, C&I ESS, Data Centers, Power & Electrical)",
+        "Huizhou Xinjie Yuan Hardware Products Co., Ltd. (C&I ESS, Small Hardware)",
+        "Guangzhou Shida Life Technology Co., Ltd. (Residential ESS, Small Hardware)",
+      ],
+      cert: "ISO9001:2015 Quality Management System Certified",
     },
-    // Contact page
+    process: {
+      sectionTag: "Manufacturing Process",
+      title: "One-Stop Full-Process Manufacturing",
+      subtitle: "Yuhang focuses on efficient manufacturing — complete equipment system and full-process capabilities, from design to finished product in one stop.",
+      steps: [
+        { phase: "Pre-Production", items: ["R&D Design", "System Management", "Scheduling"] },
+        { phase: "Cutting", items: ["Decoiling", "Laser Cutting", "Laser Tube Cutting", "Plasma Cutting"] },
+        { phase: "Forming", items: ["Bending", "Welding & Grinding", "Riveting", "Polishing"] },
+        { phase: "Surface Treatment", items: ["Sand Blasting", "Powder Coating", "E-Coating"] },
+        { phase: "Assembly", items: ["Final Assembly", "QC Inspection", "Packaging"] },
+        { phase: "Delivery", items: ["Logistics & Shipping"] },
+      ],
+    },
+    workshop: {
+      sectionTag: "Production Workshop",
+      title: "Advanced Manufacturing Equipment",
+      subtitle: "30,000㎡ modern factory, 5 specialized workshops, heavy-duty laser equipment and automated production lines",
+      items: [
+        {
+          title: "Heavy-Duty Laser Cutting",
+          desc: "Using heavy-duty laser equipment from HG Laser and Maya, ensuring precise fabrication of various steel materials. Equipped with imported industrial robots for automatic loading/unloading. Laser tube cutting: 20m × 40cm × 40cm for any tube material.",
+          img: "slide7_img2.jpg",
+        },
+        {
+          title: "Bending · Welding · Assembly",
+          desc: "Mature processes in bending, welding, and assembly, capable of handling various large, medium, and small equipment fabrication. Full sheet metal processes: bending / welding / riveting / assembly / sand blasting.",
+          img: "slide8_img1.jpg",
+        },
+        {
+          title: "Automated Coating",
+          desc: "Large coating workshop: pre-treatment + assembly line operations. Surface treatment: pre-treatment combined with a fully automated production line for high-quality, efficient surface treatment of large components.",
+          img: "slide9_img2.jpg",
+        },
+        {
+          title: "Ultra-Precision Machining",
+          desc: "Equipped with top domestic and international precision machining equipment to meet high-precision component processing requirements.",
+          img: "slide6_img2.jpg",
+        },
+      ],
+    },
+    products: {
+      sectionTag: "Products",
+      title: "Core Products",
+      subtitle: "Focused on enclosure structural components for energy storage, data centers, and power & electrical",
+      items: [
+        { name: "Energy Storage Container (6MW)", img: "slide10_img3.jpg" },
+        { name: "Energy Storage Cabinet", img: "slide10_img4.jpg" },
+        { name: "Battery Box Cover", img: "slide10_img1.jpg" },
+        { name: "Power Distribution Box", img: "slide10_img2.jpg" },
+      ],
+    },
+    industries: {
+      sectionTag: "Industry Applications",
+      title: "Sheet Metal Solution Applications",
+      subtitle: "Our products are widely used in communications, power equipment, home appliances, automation equipment, and modular data centers",
+      items: [
+        {
+          name: "Utility-Scale Energy Storage",
+          desc: "Yuhang Metal products are applied in utility-scale ESS solutions for CRRC, Baofeng, Siyuan Electric, Huawei, BYD, and others.",
+          img: "slide12_img1.jpg",
+        },
+        {
+          name: "C&I & Residential ESS",
+          desc: "Applied in box-type power collection equipment and long-duration battery energy storage systems.",
+          img: "slide13_img1.jpg",
+        },
+        {
+          name: "Electrical & Power Battery",
+          desc: "Applied in power battery cabinets, power supply equipment, and generator enclosures for well-known domestic enterprises.",
+          img: "slide14_img2.jpg",
+        },
+        {
+          name: "Modular Data Centers",
+          desc: "Collaborating with domestic data center ecosystem companies to deploy data centers and server room equipment domestically and internationally.",
+          img: "slide15_img3.png",
+        },
+      ],
+    },
+    customers: {
+      sectionTag: "Key Customers",
+      title: "Our Partners",
+      subtitle: "Long-term stable partnerships with well-known domestic and international enterprises",
+      list: [
+        "Guangzhou Railway Vehicle Co., Ltd.", "Renda Group", "Guangdong Junyu New Energy",
+        "Huawei", "BYD", "Siyuan Electric", "Baofeng Energy", "CRRC Group",
+        "Kehua Data", "Sungrow", "Goodwe", "Deye",
+      ],
+    },
+    culture: {
+      sectionTag: "Corporate Culture",
+      title: "Pay Tribute to the Era, Lead the Future with Intelligence",
+      values: [
+        { title: "Customer-Centric", desc: "Customer needs-driven, providing the highest quality products and services" },
+        { title: "Performance-Driven", desc: "Results-oriented, continuously improving product quality and delivery efficiency" },
+        { title: "Striving-Oriented", desc: "Respecting every striver, achieving enterprise and personal value together" },
+      ],
+      cert: "ISO9001:2015 Quality Management System Certified",
+    },
     contact: {
-      firstName: "First name",
-      lastName: "Last name",
-      email: "Email",
-      phone: "Phone",
+      sectionTag: "Contact Us",
+      title: "Looking Forward to Working with You",
+      address: "No. 833 Jinlong Avenue, Boluo County, Huizhou, Guangdong",
+      phone: "+86 159 9964 0100 / +86 132 1516 5666",
+      email: "GD_yuhangMetal@163.com",
+      website: "https://yuhang2023.com",
+      formTitle: "Send a Message",
+      firstName: "First Name",
+      lastName: "Last Name",
+      emailLabel: "Email",
+      phoneLabel: "Phone",
       phoneOptional: "Optional",
       message: "Message",
       messageMax: "Max. 500 characters",
       submit: "Submit",
     },
-    // Projects page
-    projects: {
-      viewAll: "View all",
-    },
-    // Footer
     footer: {
-      about: "About",
-      company: "Company",
-      community: "Community",
-      careers: "Careers",
-      blog: "Blog",
-      tech: "Tech",
-      music: "Music",
-      videos: "Videos",
+      description: "Guangdong Yuhang Metal Products Co., Ltd. — dedicated to R&D and manufacturing of structural components for energy storage, prefab modular data centers, and power & electrical industries.",
+      quickLinks: "Quick Links",
       products: "Products",
+      workshop: "Workshop",
+      cases: "Cases",
+      about: "About",
       contact: "Contact",
-      copyright: "© Yuhang Metal 2026 - All rights reserved",
-      description: "Guangdong Yuhang Metal Products Co., Ltd. — dedicated to R&D and manufacturing of high-quality metal products.",
+      contactInfo: "Contact Info",
+      copyright: "© 2026 Guangdong Yuhang Metal Products Co., Ltd. All rights reserved.",
     },
   },
 }
 
-export default translations
+export default t

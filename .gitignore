@@ -71,6 +71,7 @@ yarn-error.log
 # Local reference directories (not for version control)
 doc/
 imgref/
+scripts/
 
 # Gatsby dev log
 gatsby-log.txt

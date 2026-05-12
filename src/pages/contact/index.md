@@ -1,23 +1,30 @@
 ---
 templateKey: contact-page
-title: Contact
-heading: Contact us
-subheading: Visit us in our offices or simply drop us a message
+title: 联系我们
+title_en: Contact Us
+heading: 联系我们
+heading_en: Contact Us
+subheading: 欢迎莅临我们的办公室或给我们留言
+subheading_en: Visit us or send us a message
 contactform:
-  heading: Let's work together!
-  description: We'd love to hear from you. Send us a message using the form below,
-    or email us.
-  image: /img/copernico-p_kicqcom4s-unsplash-1-.jpg
+  heading: 期待与您合作！
+  heading_en: "Let's work together!"
+  description: 我们很乐意听取您的意见，请使用下面的表单给我们发送消息。
+  description_en: "We'd love to hear from you. Send us a message using the form below."
+  image: /img/slide9_img2.jpg
 office:
-  tagline: Our Office
-  location: London Spitalfield
+  tagline: 我们的办公室
+  tagline_en: Our Office
+  location: 广东省惠州市博罗县
+  location_en: Boluo County, Huizhou, Guangdong
   address: |-
-    UrbanGarden\
-    143 Fake Street\
-    London
+    广东宇航金属制品有限公司\
+    广东省惠州市博罗县金龙大道833号\
+    邮编：516100
   phone: |-
-    Email: fake@urbangarden.com\
-    Phone: 01234 567 891\
-    Monday to Friday 9-6pm GMT.
-  image: /img/klaudia-piaskowska-g3lrnieizq4-unsplash.jpg
+    电话：159 9964 0100 / 132 1516 5666\
+    邮箱：GD_yuhangMetal@163.com\
+    官网：yuhang2023.com\
+    周一至周五 9:00-18:00
+  image: /img/工厂厂区.jpg
 ---

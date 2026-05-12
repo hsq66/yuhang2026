@@ -1,36 +1,13 @@
 ---
 templateKey: about-page
-title: About
-heading: About us
-subheading: Our values, mission and culture
-team:
-  - name: Courtney Henry
-    image: /img/joanna-nix-walkup-p7zgmc33s0u-unsplash.jpg
-    title: Founder / CEO
-  - name: Michael Foster
-    title: Architect
-    image: /img/rui-silvestre-hamjpesmede-unsplash.jpg
-  - name: Leslie Alexander
-    title: Landscape Gardener
-    image: /img/brooke-cagle-norsyxmhgpi-unsplash-1-.jpg
-  - name: Dries Vincent
-    title: Manager, Business Relations
-    image: /img/bruce-mars-8yg31xn4dsw-unsplash-1-.jpg
+title: 关于我们
+title_en: About Us
+heading: 关于宇航金属
+heading_en: About Yuhang Metal
+subheading: 我们的价值观、使命与企业文化
+subheading_en: Our values, mission and corporate culture
 ---
-### Reconnect people with nature
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dui, placerat nec suscipit nec, blandit nec felis. Nam imperdiet mattis sem id cursus. Nullam ipsum dui, elementum in dignissim et, molestie vel erat. Integer gravida sodales euismod. Nam hendrerit posuere leo, a mattis lorem gravida a. Quisque aliquet nisl quam, quis efficitur magna tempor vitae. Phasellus nec hendrerit metus. Vivamus quis massa fringilla, dapibus ligula a, porttitor libero. Nulla hendrerit non augue ut consectetur. Nulla vestibulum bibendum iaculis. Fusce vitae nunc eget metus suscipit facilisis ut non nulla. Vestibulum ac consectetur mi.
+宇航金属创立于2018年，有近3万平米的现代化标准工厂生产基地和研发中心，是集装箱式装备结构件配套龙头企业。公司致力于：储能（工商储、大储、家储）、数据中心、电力电气、交通、特种预制设备等领域，提供全方位的结构件配套产品及服务。
 
-![Rooftop gardens](/img/chuttersnap-nxjyzlbnyuq-unsplash.jpg "Rooftop gardens")
-
-### Improve air quality and micro-climate
-
-Mauris pharetra sollicitudin sodales. Aenean imperdiet, nisi quis porttitor aliquam, nunc dolor imperdiet lectus, accumsan molestie nisi diam ut augue. Curabitur a eros ac metus vestibulum accumsan. Maecenas facilisis sapien enim, sit amet vulputate velit bibendum nec. Donec consequat sit amet odio sed elementum. Suspendisse maximus eros vel eleifend scelerisque. Vivamus euismod ante ut suscipit elementum. Phasellus velit diam, varius vel pellentesque id, mollis ut quam. Etiam a nulla in justo feugiat luctus id ut mauris. Sed porta massa a sollicitudin dignissim. Donec gravida est quis justo maximus pretium.
-
-### Reduce carbon footprint
-
-Duis vitae rhoncus lorem, aliquam hendrerit diam. Integer semper metus a erat dictum, ut tristique augue auctor. Integer sodales velit lacus, sed pharetra ante interdum efficitur. Vestibulum dictum sapien lacus, nec semper odio egestas cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et odio mi. Aliquam vel efficitur enim, non consequat turpis.
-
-### Support local businesses and communities
-
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+经过多年发展，逐步在新能源、数据中心、电力电气等领域提供预制式产品加工配套服务。宇航始终坚持以"客户为中心、业绩为导向、奋斗者为本"的核心价值观，在加工设备精度与能力上持续升级，在管理上追求细节，持续改善，在产品上精益求精，致力于成为箱式装备结构件配套行业的领军企业。

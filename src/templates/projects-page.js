@@ -2,17 +2,23 @@ import React from "react"
 import { graphql } from "gatsby"
 import MyHelmet from "../components/MyHelmet"
 import ProjectsPageTemplate from "./ProjectsPageTemplate"
+import { useLang } from "../context/LanguageContext"
 
 const ProjectsPage = ({ data }) => {
   const { frontmatter: fm } = data.markdownRemark
   const { edges: posts } = data.allMarkdownRemark
+  const { lang } = useLang()
+  const isZh = lang === "zh"
 
   return (
     <>
-    <MyHelmet title={fm.title} description={fm.subheading} />
+      <MyHelmet
+        title={isZh ? fm.title : (fm.title_en || fm.title)}
+        description={isZh ? fm.subheading : (fm.subheading_en || fm.subheading)}
+      />
       <ProjectsPageTemplate
-        heading={fm.heading}
-        subheading={fm.subheading}
+        heading={isZh ? fm.heading : (fm.heading_en || fm.heading)}
+        subheading={isZh ? fm.subheading : (fm.subheading_en || fm.subheading)}
         posts={posts}
       />
     </>
@@ -27,8 +33,11 @@ export const projectsPageQuery = graphql`
       html
       frontmatter {
         title
+        title_en
         heading
+        heading_en
         subheading
+        subheading_en
       }
     }
     allMarkdownRemark(
@@ -66,4 +75,3 @@ export const projectsPageQuery = graphql`
     }
   }
 `
-

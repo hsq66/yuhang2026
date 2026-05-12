@@ -1,124 +1,80 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import { useLang } from "../context/LanguageContext"
-import translations from "../i18n/translations"
+import t from "../i18n/translations"
 
 const Footer = () => {
   const { lang } = useLang()
-  const t = translations[lang].footer
+  const tr = t[lang].footer
+  const contact = t[lang].contact
 
   return (
-    <footer className="bg-gray-100">
-      <div className="max-w-7xl px-4 py-4 mx-auto sm:px-6 lg:px-8">
-        <div className="lg:flex">
-          <div className="w-full -mx-4 sm:-mx-6 lg:-mx-8 lg:w-2/5">
-            <div className="px-4 sm:px-6 lg:px-8">
-              <Link className="flex items-center gap-2" to="/">
-                <StaticImage
-                  src="../img/logo1.png"
-                  alt="宇航金属 logo"
-                  layout="fixed"
-                  width={40}
-                  height={40}
-                  backgroundColor="transparent"
-                  placeholder="blurred"
-                />
-                <div className="text-xl font-bold tracking-wide">
-                  <span className="text-gray-800 font-semibold">宇航</span>
-                  <span className="text-green-700">金属</span>
-                </div>
-              </Link>
-              <p className="max-w-md mt-2 text-gray-600">
-                {t.description}
-              </p>
-            </div>
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="max-w-7xl px-4 py-10 mx-auto sm:px-6 lg:px-8">
+        <div className="lg:flex lg:gap-12">
+          {/* Brand */}
+          <div className="lg:w-1/3">
+            <Link className="flex items-center gap-2" to="/">
+              <img src="/img/logo1.png" alt="宇航金属" className="w-9 h-9 object-contain" />
+              <div className="text-lg font-bold">
+                <span className="text-white">宇航</span>
+                <span className="text-green-400">金属</span>
+              </div>
+            </Link>
+            <p className="mt-3 text-sm text-gray-400 leading-relaxed max-w-xs">{tr.description}</p>
           </div>
 
-          <div className="mt-6 lg:mt-0 lg:flex-1">
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
-              <div>
-                <h3 className="text-gray-700 uppercase">{t.about}</h3>
-                <Link
-                  to="/about"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                >
-                  {t.company}
-                </Link>
-                <Link
-                  to="/about"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                >
-                  {t.community}
-                </Link>
-                <Link
-                  to="/about"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                >
-                  {t.careers}
-                </Link>
-              </div>
+          {/* Quick links */}
+          <div className="mt-8 lg:mt-0 lg:w-1/4">
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider">{tr.quickLinks}</h3>
+            <ul className="mt-4 space-y-2">
+              {[
+                { to: "/", label: t[lang].nav.home },
+                { to: "/products", label: t[lang].nav.products },
+                { to: "/workshop", label: t[lang].nav.workshop },
+                { to: "/cases", label: t[lang].nav.cases },
+                { to: "/about", label: t[lang].nav.about },
+                { to: "/contact", label: t[lang].nav.contact },
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link to={link.to} className="text-sm text-gray-400 hover:text-green-400 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <div>
-                <h3 className="text-gray-700 uppercase">{t.blog}</h3>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                >
-                  {t.tech}
-                </Link>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                >
-                  {t.music}
-                </Link>
-                <Link
-                  to="/"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                >
-                  {t.videos}
-                </Link>
-              </div>
-
-              <div>
-                <h3 className="text-gray-700 uppercase">{t.products}</h3>
-                <a
-                  href="https://www.gatsbyjs.com/"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Gatsby
+          {/* Contact */}
+          <div className="mt-8 lg:mt-0 lg:flex-1">
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider">{tr.contactInfo}</h3>
+            <ul className="mt-4 space-y-3 text-sm text-gray-400">
+              <li className="flex items-start gap-2">
+                <span className="text-green-400 mt-0.5">📍</span>
+                {contact.address}
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-400 mt-0.5">📞</span>
+                {contact.phone}
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-400 mt-0.5">✉</span>
+                <a href={`mailto:${contact.email}`} className="hover:text-green-400 transition-colors">
+                  {contact.email}
                 </a>
-                <a
-                  href="https://tailwindcss.com/"
-                  className="block mt-2 text-sm text-gray-600 hover:underline"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  Tailwind CSS
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-400 mt-0.5">🌐</span>
+                <a href={contact.website} target="_blank" rel="noreferrer" className="hover:text-green-400 transition-colors">
+                  {contact.website}
                 </a>
-              </div>
-
-              <div>
-                <h3 className="text-gray-700 uppercase">{t.contact}</h3>
-                <span className="block mt-2 text-sm text-gray-600">
-                  +86 755 1234 5678
-                </span>
-                <span className="block mt-2 text-sm text-gray-600">
-                  info@yuhangmetal.com
-                </span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <hr className="h-px my-6 bg-gray-300 border-none" />
-
-        <div>
-          <p className="text-center text-gray-800">{t.copyright}</p>
-        </div>
+        <hr className="mt-8 border-gray-700" />
+        <p className="mt-6 text-center text-xs text-gray-500">{tr.copyright}</p>
       </div>
     </footer>
   )
