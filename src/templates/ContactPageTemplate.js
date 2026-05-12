@@ -1,22 +1,20 @@
-import React from 'react'
+import React from "react"
 import Header from "../components/Header"
 import { TextImageSplit, SectionHeading } from "../components/Sections"
+import { useLang } from "../context/LanguageContext"
+import translations from "../i18n/translations"
 
-function ContactPageTemplate({
-  heading,
-  subheading,
-  contactform,
-  office
-}) {
+function ContactPageTemplate({ heading, subheading, contactform, office }) {
+  const { lang } = useLang()
+  const t = translations[lang].contact
+
   return (
     <div>
       <Header heading={heading} subheading={subheading} />
 
       <TextImageSplit image={contactform.image}>
         <SectionHeading>{contactform.heading}</SectionHeading>
-        <p className="mt-6 text-gray-500 text-lg">
-          {contactform.description}
-        </p>
+        <p className="mt-6 text-gray-500 text-lg">{contactform.description}</p>
         <form action="#" method="POST">
           <div className="mt-6">
             <div className="grid grid-cols-6 gap-6">
@@ -25,7 +23,7 @@ function ContactPageTemplate({
                   htmlFor="first-name"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  First name
+                  {t.firstName}
                 </label>
                 <input
                   type="text"
@@ -41,7 +39,7 @@ function ContactPageTemplate({
                   htmlFor="last-name"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Last name
+                  {t.lastName}
                 </label>
                 <input
                   type="text"
@@ -57,7 +55,7 @@ function ContactPageTemplate({
                   htmlFor="email-address"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Email
+                  {t.email}
                 </label>
                 <input
                   type="text"
@@ -74,15 +72,15 @@ function ContactPageTemplate({
                     htmlFor="phone"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Phone
+                    {t.phone}
                   </label>
-                  <span className="text-gray-500 text-sm">Optional</span>
+                  <span className="text-gray-500 text-sm">{t.phoneOptional}</span>
                 </div>
                 <input
                   type="text"
                   name="phone"
                   id="phone"
-                  autoComplete="email"
+                  autoComplete="tel"
                   className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
@@ -93,11 +91,9 @@ function ContactPageTemplate({
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Message
+                    {t.message}
                   </label>
-                  <span className="text-gray-500 text-sm">
-                    Max. 500 characters
-                  </span>
+                  <span className="text-gray-500 text-sm">{t.messageMax}</span>
                 </div>
                 <div className="mt-1">
                   <textarea
@@ -117,7 +113,7 @@ function ContactPageTemplate({
               type="submit"
               className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
-              Submit
+              {t.submit}
             </button>
           </div>
         </form>
