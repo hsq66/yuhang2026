@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby build",
+    "develop": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
+    "cross-env": "^7.0.3",
     "gatsby-plugin-postcss": "^4.14.0",
     "postcss": "^8.3.6",
     "prettier": "^2.4.1",
@@ -51,5 +52,9 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "overrides": {
+    "graphql": "15.10.2",
+    "source-map": "0.6.1"
   }
 }

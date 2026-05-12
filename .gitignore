@@ -67,3 +67,10 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Local reference directories (not for version control)
+doc/
+imgref/
+
+# Gatsby dev log
+gatsby-log.txt

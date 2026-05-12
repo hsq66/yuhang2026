@@ -1,12 +1,13 @@
 const siteUrl =
-  process.env.URL || `https://objective-thompson-fe2703.netlify.app`
+  process.env.URL || `https://hsq66.github.io/yuhang2026`
 
 module.exports = {
+  pathPrefix: `/yuhang2026`,
   siteMetadata: {
     title: "UrbanGarden",
     description:
       "Transforming and enriching our urban environments with green living spaces",
-    siteUrl: "https://objective-thompson-fe2703.netlify.app",
+    siteUrl: "https://hsq66.github.io/yuhang2026",
   },
   plugins: [
     {

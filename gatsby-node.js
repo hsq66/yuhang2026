@@ -88,19 +88,59 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const {createTypes} = actions
+  const { createTypes } = actions
   const typeDefs = `
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
     }
 
     type Frontmatter {
+      image: File @fileByRelativePath
       office: Office
+      about: About
+      contactform: ContactForm
+      team: [TeamMember]
+      featuredimage: FeaturedImage
     }
 
     type Office {
       address: String @md
       phone: String @md
+      image: File @fileByRelativePath
+    }
+
+    type ContactForm {
+      heading: String
+      description: String
+      image: File @fileByRelativePath
+    }
+
+    type About {
+      heading: String
+      description: String
+      image: AboutImage
+      button: AboutButton
+    }
+
+    type AboutImage {
+      alt: String
+      image: File @fileByRelativePath
+    }
+
+    type AboutButton {
+      label: String
+      url: String
+    }
+
+    type TeamMember {
+      name: String
+      title: String
+      image: File @fileByRelativePath
+    }
+
+    type FeaturedImage {
+      alt: String
+      image: File @fileByRelativePath
     }
   `
   createTypes(typeDefs)
