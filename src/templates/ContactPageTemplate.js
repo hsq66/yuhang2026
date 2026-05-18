@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import Header from "../components/Header"
 import { TextImageSplit, SectionHeading } from "../components/Sections"
 import { useLang } from "../context/LanguageContext"
