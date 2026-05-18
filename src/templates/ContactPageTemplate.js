@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import Header from "../components/Header"
 import { TextImageSplit, SectionHeading } from "../components/Sections"
 import { useLang } from "../context/LanguageContext"
@@ -98,7 +98,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
 
                 <div className="col-span-6 sm:col-span-3">
                   <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
-                    {t.email}
+                    {t.emailLabel}
                   </label>
                   <input
                     type="email" name="email" id="email-address"
@@ -110,7 +110,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
                 <div className="col-span-6 sm:col-span-3">
                   <div className="flex justify-between">
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                      {t.phone}
+                      {t.phoneLabel}
                     </label>
                     <span className="text-gray-500 text-sm">{t.phoneOptional}</span>
                   </div>
