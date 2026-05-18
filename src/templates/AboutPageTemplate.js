@@ -59,8 +59,8 @@ function AboutPageTemplate({ heading, subheading, html }) {
         </div>
       </Container>
 
-      {/* Markdown content */}
-      {html && (
+      {/* Markdown content - 仅中文显示，英文用 translations 里的内容替代 */}
+      {html && lang === "zh" && (
         <div className="bg-gray-50">
           <Container>
             <Content html={html} />
@@ -79,7 +79,7 @@ function AboutPageTemplate({ heading, subheading, html }) {
             {tr.culture.values.map((v, i) => (
               <div key={i} className="bg-green-700 rounded-lg p-6 text-center">
                 <div className="w-12 h-12 rounded-full bg-lime-400 text-green-900 flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {["客", "绩", "奋"][i]}
+                  {lang === "zh" ? ["客", "绩", "奋"][i] : ["C", "P", "S"][i]}
                 </div>
                 <h3 className="text-lg font-bold text-white">{v.title}</h3>
                 <p className="mt-2 text-green-200 text-sm">{v.desc}</p>
