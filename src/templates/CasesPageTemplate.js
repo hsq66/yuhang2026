@@ -15,7 +15,7 @@ const CustomerLogo = ({ logo, abbr, name, index }) => {
   if (!imgError) {
     return (
       <img
-        src={logo}
+        src={imgPath(logo)}
         alt={name}
         className="h-10 w-auto max-w-full object-contain"
         onError={() => setImgError(true)}
