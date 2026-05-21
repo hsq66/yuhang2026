@@ -1,8 +1,7 @@
 const siteUrl =
-  process.env.URL || `https://hsq66.github.io/yuhang2026`
+  process.env.URL || `https://yuhang2023.com`
 
 module.exports = {
-  pathPrefix: `/yuhang2026`,
   siteMetadata: {
     title: "广东宇航金属制品有限公司",
     titleEn: "Guangdong Yuhang Metal Products Co., Ltd.",
@@ -12,8 +11,8 @@ module.exports = {
       "Guangdong Yuhang Metal Products Co., Ltd. specializes in R&D and manufacturing of enclosure structural components for energy storage, prefab modular data centers, and power & electrical sectors.",
     keywords:
       "储能结构件,箱式装备,模块化数据中心,电力电气,钣金加工,宇航金属,广东宇航,energy storage enclosure,modular data center,sheet metal fabrication",
-    siteUrl: "https://hsq66.github.io/yuhang2026",
-    ogImage: "https://hsq66.github.io/yuhang2026/img/slide1_img3.jpg",
+    siteUrl: "https://yuhang2023.com",
+    ogImage: "https://yuhang2023.com/img/slide1_img3.jpg",
   },
   plugins: [
     {
