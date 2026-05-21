@@ -4,10 +4,16 @@ const siteUrl =
 module.exports = {
   pathPrefix: `/yuhang2026`,
   siteMetadata: {
-    title: "UrbanGarden",
+    title: "广东宇航金属制品有限公司",
+    titleEn: "Guangdong Yuhang Metal Products Co., Ltd.",
     description:
-      "Transforming and enriching our urban environments with green living spaces",
+      "广东宇航金属制品有限公司，专注于储能、预制模块化数据中心及电力电气领域的箱式装备结构件研发与制造，是箱式装备结构件配套解决方案龙头企业。",
+    descriptionEn:
+      "Guangdong Yuhang Metal Products Co., Ltd. specializes in R&D and manufacturing of enclosure structural components for energy storage, prefab modular data centers, and power & electrical sectors.",
+    keywords:
+      "储能结构件,箱式装备,模块化数据中心,电力电气,钣金加工,宇航金属,广东宇航,energy storage enclosure,modular data center,sheet metal fabrication",
     siteUrl: "https://hsq66.github.io/yuhang2026",
+    ogImage: "https://hsq66.github.io/yuhang2026/img/slide1_img3.jpg",
   },
   plugins: [
     {
@@ -73,8 +79,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `UrbanGarden`,
-        short_name: `UrbanGarden`,
+        name: `广东宇航金属制品有限公司`,
+        short_name: `宇航金属`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#047857`,

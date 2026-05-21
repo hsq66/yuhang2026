@@ -16,9 +16,10 @@ const Layout = ({ children }) => {
     <LanguageProvider>
       <div className="bg-white">
         <Helmet>
-          <html lang="zh" />
-          <title>{title} | 宇航金属</title>
+          <html lang="zh-CN" />
+          <title>{title}</title>
           <meta name="description" content={description} />
+          <meta name="keywords" content="储能结构件,箱式装备,模块化数据中心,电力电气,钣金加工,宇航金属" />
         </Helmet>
         <div className="flex flex-col h-screen justify-between">
           <Navbar
