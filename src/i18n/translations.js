@@ -117,9 +117,13 @@ const t = {
       title: "合作伙伴",
       subtitle: "与国内外知名企业建立长期稳定合作关系",
       list: [
-        "广州铁道车辆有限公司", "任达集团", "广东君誉新能源",
-        "华为", "比亚迪", "思源电气", "宝丰能源", "中车集团",
-        "科华数据", "阳光电源", "固德威", "德业股份",
+        { name: "中集集装箱", abbr: "CIMC", logo: "/img/customers/logo-cimc.png" },
+        { name: "广厦房屋", abbr: "GS", logo: "/img/customers/logo-gshousing.png" },
+        { name: "中建科工", abbr: "中建", logo: "/img/customers/logo-cscec.png" },
+        { name: "任达集团", abbr: "任达", logo: "/img/customers/logo-renda.png" },
+        { name: "广东君誉新能源装备有限公司", abbr: "君誉", logo: "/img/customers/logo-junyu.png" },
+        { name: "胜狮能源", abbr: "HSCL", logo: "/img/customers/logo-hscl.png" },
+        { name: "广州铁道车辆有限公司", abbr: "广铁", logo: "/img/customers/logo-gzrailway.png" },
       ],
     },
     culture: {
@@ -279,9 +283,13 @@ const t = {
       title: "Our Partners",
       subtitle: "Long-term stable partnerships with well-known domestic and international enterprises",
       list: [
-        "Guangzhou Railway Vehicle Co., Ltd.", "Renda Group", "Guangdong Junyu New Energy",
-        "Huawei", "BYD", "Siyuan Electric", "Baofeng Energy", "CRRC Group",
-        "Kehua Data", "Sungrow", "Goodwe", "Deye",
+        { name: "CIMC Container", abbr: "CIMC", logo: "/img/customers/logo-cimc.png" },
+        { name: "GS Housing", abbr: "GS", logo: "/img/customers/logo-gshousing.png" },
+        { name: "CSCEC Steel", abbr: "CSCEC", logo: "/img/customers/logo-cscec.png" },
+        { name: "Renda Group", abbr: "RENDA", logo: "/img/customers/logo-renda.png" },
+        { name: "Guangdong Junyu New Energy Equipment Co., Ltd.", abbr: "Junyu", logo: "/img/customers/logo-junyu.png" },
+        { name: "HSCL Energy", abbr: "HSCL", logo: "/img/customers/logo-hscl.png" },
+        { name: "Guangzhou Railway Vehicle Co., Ltd.", abbr: "GZ Rail", logo: "/img/customers/logo-gzrailway.png" },
       ],
     },
     culture: {

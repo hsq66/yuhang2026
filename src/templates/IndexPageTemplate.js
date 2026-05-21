@@ -6,6 +6,31 @@ import { useLang } from "../context/LanguageContext"
 import t from "../i18n/translations"
 import { imgPath } from "../utils/imgPath"
 
+// Customer logo with image + text-abbr fallback
+const ABBR_COLORS = [
+  "bg-blue-600", "bg-emerald-600", "bg-sky-700", "bg-teal-600",
+  "bg-indigo-600", "bg-cyan-700", "bg-green-700",
+]
+const CustomerLogo = ({ logo, abbr, name, index }) => {
+  const [imgError, setImgError] = useState(false)
+  const colorClass = ABBR_COLORS[index % ABBR_COLORS.length]
+  if (!imgError) {
+    return (
+      <img
+        src={logo}
+        alt={name}
+        className="h-10 w-auto max-w-full object-contain"
+        onError={() => setImgError(true)}
+      />
+    )
+  }
+  return (
+    <div className={`flex items-center justify-center w-12 h-10 rounded-md ${colorClass}`}>
+      <span className="text-white text-xs font-bold tracking-wide">{abbr}</span>
+    </div>
+  )
+}
+
 const HERO_IMAGES = [
   { src: imgPath("slide1_img3.jpg"), alt: "宇航金属" },
   { src: imgPath("slide3_img1.jpg"), alt: "宇航金属工厂" },
@@ -210,10 +235,11 @@ const IndexPageTemplate = ({ heading, subheading }) => {
           <SectionHeading className="mt-2">{tr.customers.title}</SectionHeading>
           <p className="mt-3 text-gray-500">{tr.customers.subtitle}</p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {tr.customers.list.map((name, i) => (
-            <div key={i} className="flex items-center justify-center h-16 bg-gray-50 rounded-lg px-3 hover:bg-green-50 transition-colors">
-              <span className="text-xs text-center text-gray-600 font-medium leading-tight">{name}</span>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          {tr.customers.list.map((customer, i) => (
+            <div key={i} className="flex flex-col items-center justify-center gap-2 h-24 bg-gray-50 rounded-xl px-3 py-3 hover:bg-green-50 hover:shadow-sm transition-all border border-transparent hover:border-green-100">
+              <CustomerLogo logo={customer.logo} abbr={customer.abbr} name={customer.name} index={i} />
+              <span className="text-xs text-center text-gray-500 leading-tight line-clamp-2">{customer.name}</span>
             </div>
           ))}
         </div>
