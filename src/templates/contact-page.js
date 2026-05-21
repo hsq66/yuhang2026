@@ -64,15 +64,11 @@ export const contactPageQuery = graphql`
           address {
             html
           }
-          address_en {
-            html
-          }
+          address_en
           phone {
             html
           }
-          phone_en {
-            html
-          }
+          phone_en
           image {
             childImageSharp {
               gatsbyImageData(width: 640, placeholder: BLURRED)
