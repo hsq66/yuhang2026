@@ -18,7 +18,7 @@ const t = {
     stats: [
       { value: "2018", label: "创立年份" },
       { value: "3万㎡", label: "现代化工厂" },
-      { value: "~2亿", label: "年产值" },
+      { value: "~2亿", label: "年产能" },
       { value: "400+", label: "员工人数" },
     ],
     about: {
@@ -184,7 +184,7 @@ const t = {
     stats: [
       { value: "2018", label: "Founded" },
       { value: "30,000㎡", label: "Modern Factory" },
-      { value: "~¥200M", label: "Annual Output" },
+      { value: "~¥200M", label: "Annual Capacity" },
       { value: "400+", label: "Employees" },
     ],
     about: {

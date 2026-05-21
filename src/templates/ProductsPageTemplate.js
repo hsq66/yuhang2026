@@ -24,9 +24,9 @@ const ProductsPageTemplate = ({ heading, subheading }) => {
     { name: lang === "zh" ? "数据中心机房设备" : "Data Center Room Equipment", img: "slide15_img4.png", cat: 2 },
     { name: lang === "zh" ? "动力电池箱柜" : "Power Battery Cabinet", img: "slide14_img1.png", cat: 3 },
     { name: lang === "zh" ? "供电设备箱体" : "Power Supply Enclosure", img: "slide14_img2.jpg", cat: 3 },
-    { name: lang === "zh" ? "板材" : "Sheet Metal Plates", img: "slide16_img2.png", cat: 4 },
-    { name: lang === "zh" ? "小五金部品" : "Small Hardware Parts", img: "slide16_img3.png", cat: 4 },
-    { name: lang === "zh" ? "金属半成品" : "Metal Semi-finished Parts", img: "slide16_img4.png", cat: 4 },
+    { name: lang === "zh" ? "板材" : "Sheet Metal Plates", img: "image (17).jpg", cat: 4 },
+    { name: lang === "zh" ? "小五金部品" : "Small Hardware Parts", img: "image (12).jpg", cat: 4 },
+    { name: lang === "zh" ? "金属半成品" : "Metal Semi-finished Parts", img: "image (15).jpg", cat: 4 },
     { name: lang === "zh" ? "工商储箱体" : "C&I ESS Enclosure", img: "slide13_img2.png", cat: 1 },
   ]
 
