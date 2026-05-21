@@ -117,7 +117,7 @@ const t = {
       title: "合作伙伴",
       subtitle: "与国内外知名企业建立长期稳定合作关系",
       list: [
-        { name: "中集集装箱", abbr: "CIMC", logo: "customers/logo-cimc.png" },
+        { name: "中集集装箱", abbr: "CIMC", logo: "cimc00.png" },
         { name: "广厦房屋", abbr: "GS", logo: "gx00.png" },
         { name: "中建科工", abbr: "中建", logo: "zjkg00.png" },
         { name: "任达集团", abbr: "任达", logo: "rd00.png" },
@@ -283,7 +283,7 @@ const t = {
       title: "Our Partners",
       subtitle: "Long-term stable partnerships with well-known domestic and international enterprises",
       list: [
-        { name: "CIMC Container", abbr: "CIMC", logo: "customers/logo-cimc.png" },
+        { name: "CIMC Container", abbr: "CIMC", logo: "cimc00.png" },
         { name: "GS Housing", abbr: "GS", logo: "gx00.png" },
         { name: "CSCEC Steel", abbr: "CSCEC", logo: "zjkg00.png" },
         { name: "Renda Group", abbr: "RENDA", logo: "rd00.png" },
