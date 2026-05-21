@@ -1,9 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import Header from "../components/Header"
 import { Container, SectionHeading } from "../components/Sections"
 import { useLang } from "../context/LanguageContext"
 import t from "../i18n/translations"
 import { imgPath } from "../utils/imgPath"
+
+const ABBR_COLORS = [
+  "bg-blue-600", "bg-emerald-600", "bg-sky-700", "bg-teal-600",
+  "bg-indigo-600", "bg-cyan-700", "bg-green-700",
+]
+const CustomerLogo = ({ logo, abbr, name, index }) => {
+  const [imgError, setImgError] = useState(false)
+  const colorClass = ABBR_COLORS[index % ABBR_COLORS.length]
+  if (!imgError) {
+    return (
+      <img
+        src={logo}
+        alt={name}
+        className="h-10 w-auto max-w-full object-contain"
+        onError={() => setImgError(true)}
+      />
+    )
+  }
+  return (
+    <div className={`flex items-center justify-center w-12 h-10 rounded-md ${colorClass}`}>
+      <span className="text-white text-xs font-bold tracking-wide">{abbr}</span>
+    </div>
+  )
+}
 
 const CasesPageTemplate = ({ heading, subheading }) => {
   const { lang } = useLang()
@@ -76,10 +100,11 @@ const CasesPageTemplate = ({ heading, subheading }) => {
           </div>
 
           {/* Customer logo grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {tr.customers.list.map((name, i) => (
-              <div key={i} className="flex items-center justify-center h-20 bg-white rounded-lg shadow-sm px-3 hover:shadow-md hover:border-green-200 border border-transparent transition-all">
-                <span className="text-xs text-center text-gray-600 font-medium leading-tight">{name}</span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            {tr.customers.list.map((customer, i) => (
+              <div key={i} className="flex flex-col items-center justify-center gap-2 h-24 bg-white rounded-lg shadow-sm px-3 py-3 hover:shadow-md hover:border-green-200 border border-transparent transition-all">
+                <CustomerLogo logo={customer.logo} abbr={customer.abbr} name={customer.name} index={i} />
+                <span className="text-xs text-center text-gray-500 leading-tight line-clamp-2">{customer.name}</span>
               </div>
             ))}
           </div>
