@@ -64,7 +64,13 @@ export const contactPageQuery = graphql`
           address {
             html
           }
+          address_en {
+            html
+          }
           phone {
+            html
+          }
+          phone_en {
             html
           }
           image {
