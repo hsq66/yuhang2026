@@ -16,9 +16,9 @@ const ProductsPageTemplate = ({ heading, subheading }) => {
   const [activeTab, setActiveTab] = useState(0)
 
   const allProducts = [
-    { name: lang === "zh" ? "电池箱盖" : "Battery Box Cover", img: "slide10_img1.jpg", cat: 1 },
-    { name: lang === "zh" ? "储能箱（6MW大储）" : "Energy Storage Container (6MW)", img: "slide10_img3.jpg", cat: 1 },
-    { name: lang === "zh" ? "储能柜" : "Energy Storage Cabinet", img: "slide10_img4.jpg", cat: 1 },
+    { name: lang === "zh" ? "电池箱盖" : "Battery Box Cover", img: "slide10_img3.jpg", cat: 1 },
+    { name: lang === "zh" ? "储能箱（6MW大储）" : "Energy Storage Container (6MW)", img: "slide10_img4.jpg", cat: 1 },
+    { name: lang === "zh" ? "储能柜" : "Energy Storage Cabinet", img: "slide10_img1.jpg", cat: 1 },
     { name: lang === "zh" ? "电力箱" : "Power Distribution Box", img: "slide10_img2.jpg", cat: 3 },
     { name: lang === "zh" ? "模块化数据中心机柜" : "Modular Data Center Cabinet", img: "slide15_img3.png", cat: 2 },
     { name: lang === "zh" ? "数据中心机房设备" : "Data Center Room Equipment", img: "slide15_img4.png", cat: 2 },
